@@ -2,7 +2,7 @@ package com.secKillService.controller;
 
 
 import com.secKillService.dao.SecKillGoodsDao;
-import com.secKillService.dao.UserDao;
+//import com.secKillService.dao.UserDao;
 import com.secKillService.entity.Student;
 import com.secKillService.entity.User;
 
@@ -20,8 +20,8 @@ import java.util.List;
 @RestController
 public class UserController {
 
-    @Autowired
-    private UserDao userDao;
+//    @Autowired
+//    private UserDao userDao;
 
 //    @Autowired
 //    private SecKillGoodsDao stuDao;
@@ -43,13 +43,13 @@ public class UserController {
         return new ModelAndView("index");
     }
 
-    @RequestMapping(value = "selectall_Backup")
-    public void selectAll_Backup(){
-        List<User> user = userDao.selectAll();
-        for (User u: user) {
-            System.out.println(u.getUserName()+">>>>>"+u.getPassword());
-        }
-    }
+//    @RequestMapping(value = "selectall_Backup")
+//    public void selectAll_Backup(){
+//        List<User> user = userDao.selectAll();
+//        for (User u: user) {
+//            System.out.println(u.getUserName()+">>>>>"+u.getPassword());
+//        }
+//    }
 
 //    @RequestMapping(value = "selectall")
 //    public ModelAndView selectAll(){
