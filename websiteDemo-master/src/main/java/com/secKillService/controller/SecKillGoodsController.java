@@ -5,6 +5,7 @@ import com.secKillService.entity.SecKillGoods;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -17,7 +18,17 @@ public class SecKillGoodsController {
   private SecKillGoodsDao secKillGoodsDao;
 
   @RequestMapping(value="seckillgoods")
-  public ModelAndView show(){
+  public ModelAndView listSeckillgoods(){
+    List<SecKillGoods> secKillGoods = secKillGoodsDao.selectAll();
+    ModelAndView modelAndView =  new ModelAndView("seckillgoodsinfo");
+    modelAndView.addObject("secKillGoods", secKillGoods);
+    return modelAndView;
+  }
+
+  @RequestMapping(value="seckill")
+  public ModelAndView seckill(@RequestParam("id") int id ){
+    secKillGoodsDao.updateStock(id);
+
     List<SecKillGoods> secKillGoods = secKillGoodsDao.selectAll();
     ModelAndView modelAndView =  new ModelAndView("seckillgoodsinfo");
     modelAndView.addObject("secKillGoods", secKillGoods);

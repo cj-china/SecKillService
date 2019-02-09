@@ -11,6 +11,26 @@
 <html>
 <head>
     <title>秒杀商品信息</title>
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#but").click(function () {
+                $.ajax({
+                           type: "GET",
+                           url: "/seckill?id=1",
+                           contentType: "application/json; charset=utf-8",
+                           dataType: "json",//表示后台返回的数据是json对象
+                           success: function (data) {
+                               $("#but").pae
+                               alert("data.d=" + data.d);
+                           },
+                           error: function (error) {
+                               alert("error=" + error);
+                           }
+                       });
+            });
+        });
+    </script>
 </head>
 <body>
     <table border="1">
@@ -28,8 +48,8 @@
                 <td>${item.id}</td>
                 <td>${item.goods_id}</td>
                 <td>${item.miaosha_price}</td>
-                <td>${item.stock_count}</td>
-                <td><input type="button" value="确定" onclick="></td>
+                <td id="stock">${item.stock_count}</td>
+                <td><input type="button" value="确定" id= "but"></td>
                 <td>${item.start_date}</td>
                 <td>${item.end_date}</td>
             </tr>
