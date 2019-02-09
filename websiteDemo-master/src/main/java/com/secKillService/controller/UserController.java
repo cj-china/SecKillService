@@ -1,7 +1,7 @@
 package com.secKillService.controller;
 
 
-import com.secKillService.dao.StuDao;
+import com.secKillService.dao.SecKillGoodsDao;
 import com.secKillService.dao.UserDao;
 import com.secKillService.entity.Student;
 import com.secKillService.entity.User;
@@ -23,8 +23,8 @@ public class UserController {
     @Autowired
     private UserDao userDao;
 
-    @Autowired
-    private StuDao stuDao;
+//    @Autowired
+//    private SecKillGoodsDao stuDao;
 
 
     @RequestMapping(value="add")
@@ -51,14 +51,14 @@ public class UserController {
         }
     }
 
-    @RequestMapping(value = "selectall")
-    public ModelAndView selectAll(){
-        List<Student> stuList = stuDao.selectAll();
-
-        ModelAndView view=new ModelAndView("detail");
-        view.addObject("stuList",stuList);
-        return view;
-    }
+//    @RequestMapping(value = "selectall")
+//    public ModelAndView selectAll(){
+//        List<Student> stuList = stuDao.selectAll();
+//
+//        ModelAndView view=new ModelAndView("detail");
+//        view.addObject("stuList",stuList);
+//        return view;
+//    }
 
     @RequestMapping(value = "delete")
     public ModelAndView deleteById(@RequestParam("id") long id){

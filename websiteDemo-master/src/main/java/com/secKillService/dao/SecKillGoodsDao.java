@@ -1,5 +1,6 @@
 package com.secKillService.dao;
 
+import com.secKillService.entity.SecKillGoods;
 import com.secKillService.entity.Student;
 
 import org.apache.ibatis.annotations.Mapper;
@@ -8,12 +9,10 @@ import org.apache.ibatis.annotations.Select;
 import java.util.List;
 
 @Mapper
-public interface StuDao {
+public interface SecKillGoodsDao {
 
 
-    @Select("select * from stu_score")
-    List<Student> selectAll();
+    @Select("select * from miaosha_goods")
+    List<SecKillGoods> selectAll();
 
-    @Select("insert into stu_score values()")
-    int insertScore();
 }
