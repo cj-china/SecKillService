@@ -25,5 +25,5 @@ public interface SecKillGoodsDao {
         + " where "
         + " id = #{id} "
     )
-    void updateStock(@Param("id") long id);
+    int updateStock(@Param("id") long id);
 }

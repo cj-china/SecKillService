@@ -26,12 +26,7 @@ public class SecKillGoodsController {
   }
 
   @RequestMapping(value="seckill")
-  public ModelAndView seckill(@RequestParam("id") int id ){
-    secKillGoodsDao.updateStock(id);
-
-    List<SecKillGoods> secKillGoods = secKillGoodsDao.selectAll();
-    ModelAndView modelAndView =  new ModelAndView("seckillgoodsinfo");
-    modelAndView.addObject("secKillGoods", secKillGoods);
-    return modelAndView;
+  public int seckill(@RequestParam("id") int id ){
+    return secKillGoodsDao.updateStock(id);
   }
 }

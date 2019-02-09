@@ -21,7 +21,7 @@
                            contentType: "application/json; charset=utf-8",
                            dataType: "json",//表示后台返回的数据是json对象
                            success: function (data) {
-                               $("#but").pae
+                               alert($("#but").parent().prev().prev().value());
                                alert("data.d=" + data.d);
                            },
                            error: function (error) {
