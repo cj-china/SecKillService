@@ -1,0 +1,7 @@
+.idea
+*.img
+target
+.recommenders
+.settings
+*logs
+.idea
