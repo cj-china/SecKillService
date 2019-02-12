@@ -38,9 +38,9 @@ public class UserController {
         return new ModelAndView("success");
     }
 
-    @RequestMapping(value = "index")
+    @RequestMapping(value = "index1")
     public ModelAndView indexPage(){
-        return new ModelAndView("index");
+        return new ModelAndView("index1");
     }
 
 //    @RequestMapping(value = "selectall_Backup")

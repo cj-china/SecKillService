@@ -17,10 +17,10 @@ public class SecKillGoodsController {
   @Autowired
   private SecKillGoodsDao secKillGoodsDao;
 
-  @RequestMapping(value="seckillgoods")
+  @RequestMapping(value="index")
   public ModelAndView listSeckillgoods(){
     List<SecKillGoods> secKillGoods = secKillGoodsDao.selectAll();
-    ModelAndView modelAndView =  new ModelAndView("seckillgoodsinfo");
+    ModelAndView modelAndView =  new ModelAndView("index");
     modelAndView.addObject("secKillGoods", secKillGoods);
     return modelAndView;
   }
