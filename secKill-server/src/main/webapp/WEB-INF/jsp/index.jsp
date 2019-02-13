@@ -13,22 +13,37 @@
     <title>秒杀商品信息</title>
     <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            $("#but").click(function () {
-                $.ajax({
-                           type: "GET",
-                           url: "/seckill?id=1",
-                           contentType: "application/json; charset=utf-8",
-                           dataType: "json",//表示后台返回的数据是json对象
-                           success: function (data) {
-                               $("#stock").eq(0).html(data);
-                           },
-                           error: function (error) {
-                               alert("error=" + error);
-                           }
-                       });
-            });
-        });
+        // $(document).ready(function () {
+        //     $("#but").click(function () {
+        //         $.ajax({
+        //                    type: "GET",
+        //                    url: "/seckill?id=1",
+        //                    contentType: "application/json; charset=utf-8",
+        //                    dataType: "json",//表示后台返回的数据是json对象
+        //                    success: function (data) {
+        //                        $("#stock").eq(0).html(data);
+        //                    },
+        //                    error: function (error) {
+        //                        alert("error=" + error);
+        //                    }
+        //         });
+        //     });
+        // });
+        function reduceStock(id, index){
+            alert(id + ":" + index);
+            $.ajax({
+                       type: "GET",
+                       url: "/seckill?id=" + id,
+                       contentType: "application/json; charset=utf-8",
+                       dataType: "json",//表示后台返回的数据是json对象
+                       success: function (data) {
+                           $("#stock"+index).eq(0).html(data);
+                       },
+                       error: function (error) {
+                           alert("error=" + error);
+                       }
+             });
+        }
     </script>
 </head>
 <body>
@@ -42,13 +57,14 @@
             <td>开始时间</td>
             <td>结束时间</td>
         </tr>
-        <c:forEach items="${secKillGoods}" var="item">
+        <c:forEach items="${secKillGoods}" var="item" varStatus="idx">
             <tr>
                 <td>${item.id}</td>
                 <td>${item.goods_id}</td>
                 <td>${item.miaosha_price}</td>
-                <td id="stock">${item.stock_count}</td>
-                <td><input type="button" value="确定" id= "but"></td>
+                <td id="stock${idx.index}">${item.stock_count}</td>
+                <td><input type="button" value="确定" id= "but"
+                           onclick="reduceStock(${item.id}, ${idx.index})"></td>
                 <td>${item.start_date}</td>
                 <td>${item.end_date}</td>
             </tr>
