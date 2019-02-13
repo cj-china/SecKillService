@@ -26,4 +26,10 @@ public interface SecKillGoodsDao {
         + " id = #{id} "
     )
     int updateStock(@Param("id") long id);
+
+    @Select("select * from "
+        + TABLE
+        + " where "
+        + "id = #{id} ")
+    SecKillGoods selectById(@Param("id") long id);
 }

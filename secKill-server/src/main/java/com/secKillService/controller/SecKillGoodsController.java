@@ -27,6 +27,8 @@ public class SecKillGoodsController {
 
   @RequestMapping(value="seckill")
   public int seckill(@RequestParam("id") int id ){
-    return secKillGoodsDao.updateStock(id);
+
+     secKillGoodsDao.updateStock(id);
+     return secKillGoodsDao.selectById(id).getStock_count();
   }
 }
