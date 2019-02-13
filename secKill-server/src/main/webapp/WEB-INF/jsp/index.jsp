@@ -30,7 +30,7 @@
         //     });
         // });
         function reduceStock(id, index){
-            alert(id + ":" + index);
+            //alert(id + ":" + index);
             $.ajax({
                        type: "GET",
                        url: "/seckill?id=" + id,
