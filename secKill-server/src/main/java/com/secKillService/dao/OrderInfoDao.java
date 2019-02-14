@@ -3,9 +3,11 @@ package com.secKillService.dao;
 import com.secKillService.entity.OrderInfo;
 
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Param;
 
+@Mapper
 public interface OrderInfoDao {
 
   String TABLE_NAME = "order_info";
