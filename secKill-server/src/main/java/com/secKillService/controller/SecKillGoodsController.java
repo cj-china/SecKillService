@@ -27,8 +27,10 @@ public class SecKillGoodsController {
 
   @RequestMapping(value="seckill")
   public int seckill(@RequestParam("id") int id ){
-
-     secKillGoodsDao.updateStock(id);
+      //判断库存数量
+      if(secKillGoodsDao.selectById(id).getStock_count()>0){
+        secKillGoodsDao.updateStock(id);
+      }
      return secKillGoodsDao.selectById(id).getStock_count();
   }
 }

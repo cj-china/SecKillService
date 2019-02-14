@@ -21,7 +21,7 @@ public interface SecKillGoodsDao {
     @Update(" update "
         + TABLE
         + " set "
-        + " stock_count = stock_count - 1 "
+        + " stock_count = stock_count-1 "
         + " where "
         + " id = #{id} "
     )
