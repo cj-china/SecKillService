@@ -2,12 +2,12 @@ package com.secKillService.entity;
 
 public class Goods {
   private int id;
-  private String goodsName;
-  private String goodsTitle;
-  private String goodsImg;
-  private String goodsDetail;
-  private double goodsPrice;
-  private int goodsStock;
+  private String goods_name;
+  private String goods_title;
+  private String goods_img;
+  private String goods_detail;
+  private double goods_price;
+  private int goods_stock;
 
   public int getId() {
     return id;
@@ -17,51 +17,51 @@ public class Goods {
     this.id = id;
   }
 
-  public String getGoodsName() {
-    return goodsName;
+  public String getGoods_name() {
+    return goods_name;
   }
 
-  public void setGoodsName(String goodsName) {
-    this.goodsName = goodsName;
+  public void setGoods_name(String goods_name) {
+    this.goods_name = goods_name;
   }
 
-  public String getGoodsTitle() {
-    return goodsTitle;
+  public String getGoods_title() {
+    return goods_title;
   }
 
-  public void setGoodsTitle(String goodsTitle) {
-    this.goodsTitle = goodsTitle;
+  public void setGoods_title(String goods_title) {
+    this.goods_title = goods_title;
   }
 
-  public String getGoodsImg() {
-    return goodsImg;
+  public String getGoods_img() {
+    return goods_img;
   }
 
-  public void setGoodsImg(String goodsImg) {
-    this.goodsImg = goodsImg;
+  public void setGoods_img(String goods_img) {
+    this.goods_img = goods_img;
   }
 
-  public String getGoodsDetail() {
-    return goodsDetail;
+  public String getGoods_detail() {
+    return goods_detail;
   }
 
-  public void setGoodsDetail(String goodsDetail) {
-    this.goodsDetail = goodsDetail;
+  public void setGoods_detail(String goods_detail) {
+    this.goods_detail = goods_detail;
   }
 
-  public double getGoodsPrice() {
-    return goodsPrice;
+  public double getGoods_price() {
+    return goods_price;
   }
 
-  public void setGoodsPrice(double goodsPrice) {
-    this.goodsPrice = goodsPrice;
+  public void setGoods_price(double goods_price) {
+    this.goods_price = goods_price;
   }
 
-  public int getGoodsStock() {
-    return goodsStock;
+  public int getGoods_stock() {
+    return goods_stock;
   }
 
-  public void setGoodsStock(int goodsStock) {
-    this.goodsStock = goodsStock;
+  public void setGoods_stock(int goods_stock) {
+    this.goods_stock = goods_stock;
   }
 }

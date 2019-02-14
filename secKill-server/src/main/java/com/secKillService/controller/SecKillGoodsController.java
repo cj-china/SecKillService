@@ -1,7 +1,9 @@
 package com.secKillService.controller;
 
+import com.secKillService.dao.GoodsDAO;
 import com.secKillService.dao.OrderInfoDao;
 import com.secKillService.dao.SecKillGoodsDao;
+import com.secKillService.entity.Goods;
 import com.secKillService.entity.OrderInfo;
 import com.secKillService.entity.SecKillGoods;
 
@@ -23,6 +25,9 @@ public class SecKillGoodsController {
   @Autowired
   private OrderInfoDao orderInfoDao;
 
+  @Autowired
+  private GoodsDAO goodsDAO;
+
   @RequestMapping(value="index")
   public ModelAndView listSeckillgoods(){
     List<SecKillGoods> secKillGoods = secKillGoodsDao.selectAll();
@@ -41,5 +46,14 @@ public class SecKillGoodsController {
         orderInfoDao.insertByOrderInfo(orderInfo);
       }
      return secKillGoodsDao.selectById(id).getStock_count();
+  }
+
+  @RequestMapping(value="goods")
+  public ModelAndView listgoods(){
+    List<Goods> goods = goodsDAO.selectAll();
+    System.out.println("goods"+","+goods);
+    ModelAndView modelAndView =  new ModelAndView("goods");
+    modelAndView.addObject("goods", goods);
+    return modelAndView;
   }
 }

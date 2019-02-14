@@ -50,33 +50,33 @@
                        error: function (error) {
                            alert("error=" + error);
                        }
-             });
+                   });
         }
     </script>
 </head>
 <body>
-    <table border="1">
+<table border="1">
+    <tr>
+        <td>id</td>
+        <td>商品id</td>
+        <td>秒杀价</td>
+        <td>库存数量</td>
+        <td>抢购</td>
+        <td>开始时间</td>
+        <td>结束时间</td>
+    </tr>
+    <c:forEach items="${secKillGoods}" var="item" varStatus="idx">
         <tr>
-            <td>id</td>
-            <td>商品id</td>
-            <td>秒杀价</td>
-            <td>库存数量</td>
-            <td>抢购</td>
-            <td>开始时间</td>
-            <td>结束时间</td>
+            <td>${item.id}</td>
+            <td>${item.goods_id}</td>
+            <td>${item.miaosha_price}</td>
+            <td id="stock${idx.index}">${item.stock_count}</td>
+            <td><input type="button" value="确定" id= "but"
+                       onclick="reduceStock(${item.id}, ${idx.index},${item.stock_count})"></td>
+            <td>${item.start_date}</td>
+            <td>${item.end_date}</td>
         </tr>
-        <c:forEach items="${secKillGoods}" var="item" varStatus="idx">
-            <tr>
-                <td>${item.id}</td>
-                <td>${item.goods_id}</td>
-                <td>${item.miaosha_price}</td>
-                <td id="stock${idx.index}">${item.stock_count}</td>
-                <td><input type="button" value="确定" id= "but"
-                           onclick="reduceStock(${item.id}, ${idx.index},${item.stock_count})"></td>
-                <td>${item.start_date}</td>
-                <td>${item.end_date}</td>
-            </tr>
-        </c:forEach>
-    </table>
+    </c:forEach>
+</table>
 </body>
 </html>
