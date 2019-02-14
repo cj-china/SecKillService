@@ -1,5 +1,6 @@
 package com.secKillService.controller;
 
+import com.secKillService.dao.OrderInfoDao;
 import com.secKillService.dao.SecKillGoodsDao;
 import com.secKillService.entity.OrderInfo;
 import com.secKillService.entity.SecKillGoods;
@@ -19,6 +20,9 @@ public class SecKillGoodsController {
   @Autowired
   private SecKillGoodsDao secKillGoodsDao;
 
+  @Autowired
+  private OrderInfoDao orderInfoDao;
+
   @RequestMapping(value="index")
   public ModelAndView listSeckillgoods(){
     List<SecKillGoods> secKillGoods = secKillGoodsDao.selectAll();
@@ -33,8 +37,8 @@ public class SecKillGoodsController {
       if(secKillGoodsDao.selectById(id).getStock_count()>0){
         secKillGoodsDao.updateStock(id);
         Date date=new Date();
-        OrderInfo orderInfo=new OrderInfo(1,1,1,1,"华为p9",2999.9,1,0,date,date);
-        secKillGoodsDao.insertByOrderInfo(orderInfo);
+        OrderInfo orderInfo=new OrderInfo();
+        orderInfoDao.insertByOrderInfo(orderInfo);
       }
      return secKillGoodsDao.selectById(id).getStock_count();
   }

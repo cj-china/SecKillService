@@ -1,32 +1,20 @@
 package com.secKillService.entity;
 
+
 import java.util.Date;
 
 public class OrderInfo {
   private int id;
-  private int userId;
-  private int goodsId;
-  private int DeliveryAddrId;
-  private String goodsName;
-  private double goodsPrice;
-  private int orderChannel;
-  private int staus;
-  private Date createDate;
-  private Date payDate;
-
-  public OrderInfo(int id, int userId, int goodsId, int deliveryAddrId, String goodsName,
-                   double goodsPrice, int orderChannel, int staus, Date createDate, Date payDate) {
-    this.id = id;
-    this.userId = userId;
-    this.goodsId = goodsId;
-    DeliveryAddrId = deliveryAddrId;
-    this.goodsName = goodsName;
-    this.goodsPrice = goodsPrice;
-    this.orderChannel = orderChannel;
-    this.staus = staus;
-    this.createDate = createDate;
-    this.payDate = payDate;
-  }
+  private int user_id;
+  private int goods_id;
+  private int delivery_addr_id;
+  private String goods_name;
+  private int goods_count;
+  private double goods_price;
+  private int order_channel;
+  private int status;
+  private Date create_date;
+  private Date pay_date;
 
   public int getId() {
     return id;
@@ -36,90 +24,102 @@ public class OrderInfo {
     this.id = id;
   }
 
-  public int getUserId() {
-    return userId;
+  public int getUser_id() {
+    return user_id;
   }
 
-  public void setUserId(int userId) {
-    this.userId = userId;
+  public void setUser_id(int user_id) {
+    this.user_id = user_id;
   }
 
-  public int getGoodsId() {
-    return goodsId;
+  public int getGoods_id() {
+    return goods_id;
   }
 
-  public void setGoodsId(int goodsId) {
-    this.goodsId = goodsId;
+  public void setGoods_id(int goods_id) {
+    this.goods_id = goods_id;
   }
 
-  public int getDeliveryAddrId() {
-    return DeliveryAddrId;
+  public int getDelivery_addr_id() {
+    return delivery_addr_id;
   }
 
-  public void setDeliveryAddrId(int deliveryAddrId) {
-    DeliveryAddrId = deliveryAddrId;
+  public void setDelivery_addr_id(int delivery_addr_id) {
+    this.delivery_addr_id = delivery_addr_id;
   }
 
-  public String getGoodsName() {
-    return goodsName;
+  public String getGoods_name() {
+    return goods_name;
   }
 
-  public void setGoodsName(String goodsName) {
-    this.goodsName = goodsName;
+  public void setGoods_name(String goods_name) {
+    this.goods_name = goods_name;
   }
 
-  public double getGoodsPrice() {
-    return goodsPrice;
+  public int getGoods_count() {
+    return goods_count;
   }
 
-  public void setGoodsPrice(double goodsPrice) {
-    this.goodsPrice = goodsPrice;
+  public void setGoods_count(int goods_count) {
+    this.goods_count = goods_count;
   }
 
-  public int getOrderChannel() {
-    return orderChannel;
+  public double getGoods_price() {
+    return goods_price;
   }
 
-  public void setOrderChannel(int orderChannel) {
-    this.orderChannel = orderChannel;
+  public void setGoods_price(double goods_price) {
+    this.goods_price = goods_price;
   }
 
-  public int getStaus() {
-    return staus;
+  public int getOrder_channel() {
+    return order_channel;
   }
 
-  public void setStaus(int staus) {
-    this.staus = staus;
+  public void setOrder_channel(int order_channel) {
+    this.order_channel = order_channel;
   }
 
-  public Date getCreateDate() {
-    return createDate;
+  public int getStatus() {
+    return status;
   }
 
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
+  public void setStatus(int status) {
+    this.status = status;
   }
 
-  public Date getPayDate() {
-    return payDate;
+  public Date getCreate_date() {
+    return create_date;
   }
 
-  public void setPayDate(Date payDate) {
-    this.payDate = payDate;
+  public void setCreate_date(Date create_date) {
+    this.create_date = create_date;
   }
 
-  @Override
-  public String toString() {
-    return
-        id +","+
-        + userId +","
-        + goodsId +","
-       + DeliveryAddrId +","
-        + goodsName +"," +
-        + orderChannel +","
-        + staus +","
-        + createDate +","
-        + payDate
-       ;
+  public Date getPay_date() {
+    return pay_date;
+  }
+
+  public void setPay_date(Date pay_date) {
+    this.pay_date = pay_date;
+  }
+
+  public OrderInfo(int id, int user_id, int goods_id, int delivery_addr_id, String goods_name,
+                   int goods_count, double goods_price, int order_channel, int status, Date
+                       create_date, Date pay_date) {
+    this.id = id;
+    this.user_id = user_id;
+    this.goods_id = goods_id;
+    this.delivery_addr_id = delivery_addr_id;
+    this.goods_name = goods_name;
+    this.goods_count = goods_count;
+    this.goods_price = goods_price;
+    this.order_channel = order_channel;
+    this.status = status;
+    this.create_date = create_date;
+    this.pay_date = pay_date;
+  }
+
+  public OrderInfo() {
   }
 }

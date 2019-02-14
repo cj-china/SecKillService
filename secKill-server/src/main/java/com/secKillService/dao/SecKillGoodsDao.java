@@ -36,19 +36,4 @@ public interface SecKillGoodsDao {
         + "id = #{id} ")
     SecKillGoods selectById(@Param("id") long id);
 
-    @Options(useGeneratedKeys = true, keyProperty = "id")
-    @Insert(" insert into "
-        + " order_info "
-        + " set "
-        + " user_id=#{teamId}, "
-        + " goods_id=#{smartPlanId}, "
-        + " Delivery_addr_id=#{wait}, "
-        + " goods_name=#{timing}, "
-        + " order_channel=#{decisionId}, "
-        + " staus=#{leftActionId}, "
-        + " create_date=#{rightActionId}, "
-        + " pay_date=#{deleteFlag} "
-    )
-    OrderInfo insertByOrderInfo(@Param("orderString)\")Info") OrderInfo orderInfo);
-
 }
