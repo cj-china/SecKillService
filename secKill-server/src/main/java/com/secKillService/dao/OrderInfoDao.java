@@ -16,14 +16,14 @@ public interface OrderInfoDao {
   @Insert(" insert into "
       + TABLE_NAME
       + " set "
-      + " user_id=#{user_id}, "
-      + " goods_id=#{goods_id}, "
-      + " Delivery_addr_id=#{Delivery_addr_id}, "
-      + " goods_name=#{goods_name}, "
-      + " order_channel=#{order_channel}, "
-      + " staus=#{staus}, "
-      + " create_date=#{create_date}, "
-      + " pay_date=#{pay_date} "
+      + " user_id = #{user_id}, "
+      + " goods_id= #{goods_id}, "
+      + " delivery_addr_id = #{delivery_addr_id}, "
+      + " goods_name = #{goods_name}, "
+      + " order_channel = #{order_channel}, "
+      + " status = #{status}, "
+      + " create_date = #{create_date}, "
+      + " pay_date = #{pay_date} "
   )
-  int insertByOrderInfo(@Param("orderString") OrderInfo orderInfo);
+  int insertByOrderInfo(OrderInfo orderInfo);
 }
