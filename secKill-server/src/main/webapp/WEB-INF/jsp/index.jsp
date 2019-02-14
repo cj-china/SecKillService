@@ -39,6 +39,7 @@
                        success: function (data) {
                            if(count>=1){
                                $("#stock"+index).eq(0).html(data);
+
                            }else{
                                $("#stock"+index).eq(0).html(0);
                                alert(" 该商品已经售罄");
