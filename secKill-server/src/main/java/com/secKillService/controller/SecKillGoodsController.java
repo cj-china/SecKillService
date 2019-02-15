@@ -48,12 +48,5 @@ public class SecKillGoodsController {
      return secKillGoodsDao.selectById(id).getStock_count();
   }
 
-  @RequestMapping(value="goods")
-  public ModelAndView listgoods(){
-    List<Goods> goods = goodsDAO.selectAll();
-    System.out.println("goods"+","+goods);
-    ModelAndView modelAndView =  new ModelAndView("goods");
-    modelAndView.addObject("goods", goods);
-    return modelAndView;
-  }
+
 }
