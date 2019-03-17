@@ -1,0 +1,59 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <servlet-name>helloServlet</servlet-name>
+    <servlet-class>HelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>helloServlet</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>dateServlet</servlet-name>
+    <servlet-class>DateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>dateServlet</servlet-name>
+    <url-pattern>/date</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>bmiServlet</servlet-name>
+    <servlet-class>BmiServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>bmiServlet</servlet-name>
+    <url-pattern>/bmi</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>addUserServlet</servlet-name>
+    <servlet-class>AddUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addUserServlet</servlet-name>
+    <url-pattern>/add</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>listUserServlet</servlet-name>
+    <servlet-class>ListUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>listUserServlet</servlet-name>
+    <url-pattern>/listUser</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>delUserServlet</servlet-name>
+    <servlet-class>DelUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>delUserServlet</servlet-name>
+    <url-pattern>/del</url-pattern>
+  </servlet-mapping>
+</web-app>

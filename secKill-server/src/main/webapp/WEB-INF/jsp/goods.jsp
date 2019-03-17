@@ -32,7 +32,7 @@
             <td>${item.id}</td>
             <td>${item.goods_name}</td>
             <td>${item.goods_title}</td>
-            <td>${item.goods_img}</td>
+            <td><img src="${item.goods_img}" width="30"></td>
             <td>${item.goods_detail}</td>
             <td>${item.goods_price}</td>
             <td>${item.goods_stock}</td>

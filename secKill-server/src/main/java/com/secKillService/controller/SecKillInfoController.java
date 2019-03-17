@@ -36,7 +36,6 @@ public class SecKillInfoController {
           if(secKillGoods.getGoods_id()==goods.getId()){
             SecKillInfo secKillInfo=new SecKillInfo();
             secKillInfo.setGoods_name(goods.getGoods_name());
-            System.out.println("goods_name"+","+goods.getGoods_name());
             secKillInfo.setGoods_price(goods.getGoods_price());
             secKillInfo.setMiaosha_price(secKillGoods.getMiaosha_price());
             secKillInfo.setStock_count(secKillGoods.getStock_count());

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="http://www.baidu.com">
+    <!-- value:文本框的默认值
+		placeholder：占位文本
+		maxlength：最大字符长度
+		readonly:只读
+		-->
+    <input type="text" name="username" value="lalala"
+    placeholder="用户名" maxlength="10">
+    <input type="password" name="password">
+    <hr>
+    性别：
+    <input type="radio" name="gender" id="nan" value="nan"><label for="nan">男</label>
+    <input type="radio" name="gender" id="nv" value="nv"><label for="nv">女</label>
+    <input checked="checked" type="radio" name="gender" id="qt" value="qt"><label for="qt">其它</label>
+    <hr>
+    爱好：
+    <input checked="checked" type="checkbox" name="hobby" id="lq" value="lq"><label for="lq">篮球</label>
+    <input checked="checked" type="checkbox" name="hobby" id="wz" value="wz"><label for="wz">王者荣耀</label>
+    <input checked="checked" type="checkbox" name="hobby" id="ldm" value="ldm"><label for="ldm">撸代码</label>
+    <hr>
+    生日：
+    <input type="date" name="birthday">
+    <hr>
+    靓照：
+    <input type="file" name="pic">
+    <hr>
+    个人介绍：
+    <textarea name="des" rows="3" cols="20">这个家伙什么都没留下，很懒</textarea>
+    <hr>
+    出生地:
+    <select>
+        <option>请选择</option>
+        <option value="bj">北京</option>
+        <option selected="selected" value="sh">上海</option>
+        <option value="gz">广州</option>
+    </select>
+    <input type="hidden" name="id" value="123456">
+    <!--按钮 -->
+    <input type="submit" value="注册">
+    <input type="reset" value="reset">
+    <input type="button" value="自定义按钮">
+
+</form>
+</body>
+</html>

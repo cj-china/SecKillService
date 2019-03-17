@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片</title>
+</head>
+<body>
+<!-- alt:如果图片不能正常显示时
+显示此内容 
+src:路径，
+相对路径：
+	1. 图片和页面在同一目录 直接写图片名
+	2. 图片在页面的上级目录 ../图片名
+	3. 图片在页面的下级目录 文件夹名/图片名
+绝对路径:以http开头 
+如果访问站内资源使用相对路径
+如果访问站外资源使用绝对路径,
+访问站外资源如果人家网站路径改变 
+	则不能正常显示-->
+<!-- 支持的图片格式：
+1. jpg/jpeg 
+2. png 支持透明色
+3. gif动图 
+title:鼠标悬停时显示的内容
+width/height:两种赋值方式1. 像素 2.百分比
+- 如果只设置宽度 
+则高度会根据原始宽高比自动缩放
+-->
+<img width="400px" height="400px" alt="美女图片" title="这是 美女" src="a.jpg">
+<img src="../k.jpg">
+<img src="abc/d.jpg">
+<img src="../imgs/2.gif">
+<img src="http://cdn.tmooc.cn/bsfile//imgad///136E24B2BBB34C1B8EF10B97A442EF18.jpg">
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <servlet-name>lifeServlet</servlet-name>
+    <servlet-class>web.LifeServlet</servlet-class>
+    <init-param>
+      <param-name>company</param-name>
+      <param-value>阿里巴巴</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>lifeServlet</servlet-name>
+    <url-pattern>/life</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>bmiServlet</servlet-name>
+    <servlet-class>web.BmiServlet</servlet-class>
+    <init-param>
+      <param-name>min</param-name>
+      <param-value>1</param-value>
+    </init-param>
+    <init-param>
+      <param-name>max</param-name>
+      <param-value>2</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>bmiServlet</servlet-name>
+    <url-pattern>/bmi</url-pattern>
+  </servlet-mapping>
+</web-app>
